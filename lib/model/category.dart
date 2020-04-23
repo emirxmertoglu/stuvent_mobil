@@ -17,8 +17,8 @@ final allCategory = Category(
 
 final musicCategory = Category(
   categoryId: 1,
-  name: "Müzik",
-  icon: Icons.music_note,
+  name: "QR Kod",
+  icon: Icons.camera_alt,
 );
 
 final meetUpCategory = Category(
