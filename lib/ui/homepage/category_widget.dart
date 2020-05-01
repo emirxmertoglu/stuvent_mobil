@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:stuventmobil/styleguide.dart';
 import '../../app_state.dart';
 import '../../model/category.dart';
+import '../QrCode/qr_code_page.dart';
 
 class CategoryWidget extends StatelessWidget {
   final Category category;
@@ -18,6 +19,9 @@ class CategoryWidget extends StatelessWidget {
       onTap: () {
         if (!isSelected) {
           appState.updateCategoryId(category.categoryId);
+        }
+        if(category.categoryId == 1){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => QrCodePage()),);
         }
       },
       child: Container(
